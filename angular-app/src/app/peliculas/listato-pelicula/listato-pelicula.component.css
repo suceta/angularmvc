@@ -1,0 +1,13 @@
+.card-peli  {
+    border: 1px solid;
+    border-radius: 0.2rem;
+    border-color: grey;
+    padding: 0.2rem;
+    margin-bottom : 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+    
+
+}

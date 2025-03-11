@@ -1,0 +1,30 @@
+<div>
+    <p>listato-pelicula works!</p>
+
+    @if (!peliculas) {
+        <div>
+        <img height="150" width="250"
+            src="images/gifloading/loaging-girando.gif">
+        </div>
+    }@else if (peliculas.length===0) {
+
+        <div>
+        <p class="text-red"> No se encontraron valores </p>
+        </div>
+    }@else {
+
+        @for (pelicula of peliculas; track $index) {
+        <div class="card-peli">
+            
+            <div>
+            <img [ngSrc] ="pelicula.poster" [priority]="$index===0"  width="169" height="250" />
+            </div>
+            <div>
+            <p> {{ pelicula.titulo }}   </p>
+            <p> {{ pelicula.fechaLanzamiento | date:'dd/MM/YYYY hh:mm:ss' }}</p>
+            <p> {{ pelicula.precio }} </p>
+            </div>
+        </div>
+        }
+    }
+</div>
